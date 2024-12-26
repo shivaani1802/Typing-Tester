@@ -1,0 +1,5 @@
+score=0
+missed=0
+time=0
+count=0
+words=list(english_words_set)
