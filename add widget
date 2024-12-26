@@ -1,0 +1,36 @@
+#Creating a label to show the name of the project
+label=Label(wn,text='Typing Test By PythonGeeks',font=('arial',25,
+           'italic bold'),fg='gray',width=40)
+label.place(x=10,y=10)
+
+#label to show the instruction initially and then to show the words to be typed
+nextWord=Label(wn,text='Hit enter button to start and after typing the word',font=('arial',20,
+            'italic bold'),fg='black')
+nextWord.place(x=30,y=240)
+
+#Label to show text ‘Your Score’
+scorelabel=Label(wn,text='Your Score:',font=('arial',25,
+           'italic bold'),fg='red')
+scorelabel.place(x=10,y=100)
+
+#Label to show score
+scoreboard=Label(wn,text=score,font=('arial',25,
+            'italic bold'),fg='blue')
+scoreboard.place(x=100,y=180)
+#Label to show text Time Elapsed
+timerlabel=Label(wn,text='Time Elapsed:',font=('arial',25,
+            'italic bold'),fg='red')
+timerlabel.place(x=500,y=100)
+
+#Label to show time
+timer=Label(wn,text=time,font=('arial',25,
+             'italic bold'),fg='blue')
+timer.place(x=560,y=180)
+
+#This widget takes the input from the user
+userInput= Entry(wn,font=('arial',25,'italic bold'),bd=10,justify='center')
+userInput.place(x=150,y=330)
+userInput.focus_set()
+
+wn.bind('<Return>',mainGame)#Runs the mainGame function every time the user presses enter button
+wn.mainloop()#Runs the window till it is closed
