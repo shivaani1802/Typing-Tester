@@ -1,0 +1,5 @@
+#Creating the game window and adding size, title and color
+wn= Tk()
+wn.geometry('700x600')
+wn.title('Typing Test By PythonGeeks')
+wn.config(bg='honeydew2')
