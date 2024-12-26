@@ -1,0 +1,17 @@
+def mainGame(event):
+ global score, missed,count
+ if time==0: #At the starting of the game
+  random.shuffle(words) #Shuffle the list words randomly
+  nextWord.configure(text=words[0]) #Show the first element of the list in the nextWord label
+  userInput.delete(0,END) #clear the entry widget userInput
+  timeFunc() #call the time function
+
+ #If the enter button is pressed and it is not the start of the game
+ if userInput.get()== nextWord['text']: #check if user entered correctly
+  score +=1 #increment score
+  scoreboard.configure(text=score) #show the new score on scoreboard
+ count+=1 #Increment the count
+ if(count<=10): #If count is less the 10
+  random.shuffle(words) #Shuffle the list words randomly
+  nextWord.configure(text=words[0])#Show the first element of the list in the    nextWord label
+  userInput.delete(0,END)#clear the entry widget userInput
